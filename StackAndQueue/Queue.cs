@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StackAndQueue
 {
-    internal class Queue
+    public class Queue
     {
         Node head = null;
         public void Enqueue(int data)
@@ -39,6 +39,18 @@ namespace StackAndQueue
             {
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
+            }
+        }
+        public void Dequeue(int data)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty, Deletion is not possible");
+                return;
+            }
+            else
+            {
+                this.head = this.head.next;
             }
         }
     }
